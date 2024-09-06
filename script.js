@@ -65,7 +65,7 @@ function gerar() {
   let code = `${camara[camaraIn.value]}${rua[ruaIn.value]}${padrao}${
     primeiroDigito[digito1.value]
   }${segundoDigito[digito2.value]}`;
-  imgQr.src = `http://api.qrserver.com/v1/create-qr-code/?data=${code}&size=500x500`;
+  imgQr.src = `http://api.qrserver.com/v1/create-qr-code/?data=${code}&size=250x250`;
 }
 
 btn.addEventListener("click", gerar);
