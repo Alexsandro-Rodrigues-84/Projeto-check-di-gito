@@ -31,13 +31,20 @@ h2 {
     display: none;
   }
 
+  h1 {
+    margin-left: 30%;
+  }
+
   input {
-    width: 20%;
+    margin-right: 5px;
+    width: 2.5rem;
   }
 
   .form {
     display: flex;
     margin-top: 25%;
+    align-items: center;
+    padding: 1px;
   }
 
   body {
