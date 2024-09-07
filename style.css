@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+label,
+button,
+div,
+h1 {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20%;
+  padding: auto;
+}
+
+@media (max-width: 600px) {
+  input,
+  label,
+  button,
+  div,
+  h1 {
+    display: flex;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  input {
+    width: 20%;
+  }
+
+  .form {
+    display: flex;
+    margin-top: 25%;
+  }
+
+  body {
+    background-color: rgb(128, 169, 46);
+  }
+
+  button {
+    margin: 30% 40%;
+  }
+
+  #qrCode {
+    margin-left: 35%;
+  }
+}
