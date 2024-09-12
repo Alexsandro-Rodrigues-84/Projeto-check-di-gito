@@ -14,27 +14,35 @@
   <h1>Check Dígito</h1>
 
   <div class="form">
-    <label for="camara">Camara</label>
-    <input type="number" id="camara">
 
-    <label for="rua">Rua</label>
-    <input type="text" id="rua">
+    <div class="formInput">
+      <label for="camara">Camara</label>
+      <input type="number" id="camara">
 
-    <label for="primeiroDigito">Digito 1</label>
-    <input type="number" id="primeiroDigito">
+      <label for="rua">Rua</label>
+      <input type="text" id="rua">
 
-    <label for="segundoDigito">Digito 2 </label>
-    <input type="number" id="segundoDigito">
+      <label for="primeiroDigito">Digito 1</label>
+      <input type="number" id="primeiroDigito">
+
+      <label for="segundoDigito">Digito 2 </label>
+      <input type="number" id="segundoDigito">
+    </div>
+
+
+    <div class="btn">
+      <button id="gerar">GERAR</button>
+    </div>
+
 
 
   </div>
 
-  <button id="gerar">GERAR</button>
 
-  <br><br><br>
 
-  <div id="qrCode">
-    <img src="" alt="QRCODE" id="img">
+  <div class="qrCode">
+    <img src="" alt="QRCODE" class="img" id="img">
+    <figcaption id="description"></figcaption>
   </div>
 
 

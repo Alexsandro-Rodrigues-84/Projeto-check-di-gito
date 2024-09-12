@@ -9,7 +9,7 @@ label,
 button,
 div,
 h1 {
-  display: none;
+  visibility: hidden;
 }
 
 h2 {
@@ -24,7 +24,7 @@ h2 {
   button,
   div,
   h1 {
-    display: flex;
+    visibility: visible;
   }
 
   h2 {
@@ -32,30 +32,67 @@ h2 {
   }
 
   h1 {
-    margin-left: 30%;
-  }
-
-  input {
-    margin-right: 5px;
-    width: 2.5rem;
+    text-align: center;
+    margin: 20px;
   }
 
   .form {
     display: flex;
-    margin-top: 25%;
     align-items: center;
-    padding: 1px;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .gerar {
+    background-color: blue;
+  }
+
+  .formInput {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    width: 100vw;
+  }
+
+  .btn > button {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  .qrCode {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+  }
+
+  .qrCode > figcaption {
+    margin: 10px;
+    font-weight: bolder;
+  }
+
+  input {
+    width: 10vw;
+    height: 3vh;
   }
 
   body {
     background-color: rgb(128, 169, 46);
-  }
-
-  button {
-    margin: 30% 40%;
-  }
-
-  #qrCode {
-    margin-left: 35%;
   }
 }

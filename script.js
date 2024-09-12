@@ -58,6 +58,7 @@ const camaraIn = document.querySelector("#camara");
 const ruaIn = document.querySelector("#rua");
 const digito1 = document.querySelector("#primeiroDigito");
 const digito2 = document.querySelector("#segundoDigito");
+const descripition = document.querySelector("#description");
 const imgQr = document.querySelector("#img");
 const btn = document.querySelector("#gerar");
 
@@ -66,6 +67,11 @@ function gerar() {
     primeiroDigito[digito1.value]
   }${segundoDigito[digito2.value]}`;
   imgQr.src = `http://api.qrserver.com/v1/create-qr-code/?data=${code}&size=250x250`;
+  descripition.innerText = code;
+  camaraIn.value = "";
+  ruaIn.value = "";
+  digito1.value = "";
+  digito2.value = "";
 }
 
 btn.addEventListener("click", gerar);
