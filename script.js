@@ -11,7 +11,7 @@ const camara = {
   13: "4F323C",
   14: "4F323D",
   16: "4F323F",
-  29: "4F3342"
+  29: "4F3342",
 };
 
 const rua = {
@@ -59,20 +59,40 @@ const camaraIn = document.querySelector("#camara");
 const ruaIn = document.querySelector("#rua");
 const digito1 = document.querySelector("#primeiroDigito");
 const digito2 = document.querySelector("#segundoDigito");
-const descripition = document.querySelector("#description");
-const imgQr = document.querySelector("#img");
+const nivel = document.querySelector("#nivel");
+const descripitionLocation = document.querySelector("#description-location");
+const descripitionCheck = document.querySelector("#description-check");
+const locationQr = document.querySelector("#location-code");
+const checkQr = document.querySelector("#check-code");
 const btn = document.querySelector("#gerar");
 
-function gerar() {
-  let code = `${camara[camaraIn.value]}${rua[ruaIn.value]}${padrao}${
+function gerarLocation() {
+  let camaraLocation = "";
+  if (camaraIn.value < 10) {
+    camaraLocation = 0 + camaraIn.value;
+  } else {
+    camaraLocation = camaraIn.value;
+  }
+
+  const location = `C${camaraLocation}${ruaIn.value}Q${digito1.value}${digito2.value}N${nivel.value}`;
+  locationQr.src = `http://api.qrserver.com/v1/create-qr-code/?data=${location}&size=250x250`;
+  descripitionLocation.innerText = location;
+}
+
+function gerarCheckDigito() {
+  const code = `${camara[camaraIn.value]}${rua[ruaIn.value]}${padrao}${
     primeiroDigito[digito1.value]
   }${segundoDigito[digito2.value]}`;
-  imgQr.src = `http://api.qrserver.com/v1/create-qr-code/?data=${code}&size=250x250`;
-  descripition.innerText = code;
+  checkQr.src = `http://api.qrserver.com/v1/create-qr-code/?data=${code}&size=250x250`;
+  descripitionCheck.innerText = code;
   camaraIn.value = "";
   ruaIn.value = "";
   digito1.value = "";
   digito2.value = "";
+  nivel.value = "";
 }
 
-btn.addEventListener("click", gerar);
+btn.addEventListener("click", () => {
+  gerarLocation();
+  gerarCheckDigito();
+});

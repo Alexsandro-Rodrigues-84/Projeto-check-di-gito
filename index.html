@@ -16,17 +16,20 @@
   <div class="form">
 
     <div class="formInput">
-      <label for="camara">Camara</label>
+      <label for="camara">C</label>
       <input type="number" id="camara">
 
-      <label for="rua">Rua</label>
+      <label for="rua">R</label>
       <input type="text" id="rua">
 
-      <label for="primeiroDigito">Digito 1</label>
+      <label for="primeiroDigito">Q Dig 1</label>
       <input type="number" id="primeiroDigito">
 
-      <label for="segundoDigito">Digito 2 </label>
+      <label for="segundoDigito">Q Dig 2</label>
       <input type="number" id="segundoDigito">
+
+      <label for="nivel">N</label>
+      <input type="number" id="nivel">
     </div>
 
 
@@ -38,12 +41,18 @@
 
   </div>
 
+  <div class="qrCode">
+    <img src="" alt="Location" class="img" id="location-code">
+    <figcaption id="description-location"></figcaption>
+  </div>
 
 
   <div class="qrCode">
-    <img src="" alt="QRCODE" class="img" id="img">
-    <figcaption id="description"></figcaption>
+    <img src="" alt="Check-digito" class="img" id="check-code">
+    <figcaption id="description-check"></figcaption>
   </div>
+
+
 
 
   <script src="script.js"></script>
