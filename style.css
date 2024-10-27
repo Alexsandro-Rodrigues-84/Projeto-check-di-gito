@@ -37,7 +37,6 @@ h2 {
   }
 
   .codes {
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,14 +86,10 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
   }
 
   .qrCode > figcaption {
     font-weight: bolder;
-  }
-
-  figcaption {
     margin: 5px;
   }
 
